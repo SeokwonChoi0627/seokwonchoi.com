@@ -196,10 +196,15 @@ nav.scrolled { border-bottom-color: var(--hairline); }
 }
 .about-body { font-size: 15px; font-weight: 300; color: var(--body); line-height: 1.9; }
 .about-body p + p { margin-top: 20px; }
+.about-body strong { color: var(--body-strong); font-weight: 400; }
+.about-right { padding-top: 8px; }
 .about-quote {
   border-left: 3px solid var(--m-blue-light); padding-left: 20px;
-  font-size: 17px; font-style: italic; color: var(--body-strong); line-height: 1.6;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+}
+.about-quote p {
+  font-size: 17px; font-weight: 300; font-style: italic;
+  color: var(--body-strong); line-height: 1.75;
 }
 .about-keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; }
 .keyword {
