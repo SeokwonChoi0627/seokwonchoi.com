@@ -40,7 +40,7 @@
         <span class="hero-tag">#SAP</span>
         <span class="hero-tag">#예산관리</span>
       </div>
-      <a href="mailto:dragon0627@naver.com" class="hero-cta">Contact</a>
+      <a href="mailto:dragon0627@naver.com" class="hero-cta" id="contact-trigger">Contact</a>
     </div>
     <div class="hero-photo-wrap">
       <img src="photos/profile.jpg" alt="최석원 프로필사진" width="800" height="1200" loading="eager" fetchpriority="high">
@@ -289,6 +289,63 @@
   <p class="footer-domain">seokwonchoi.com &nbsp;·&nbsp; &copy;2026 최석원</p>
 </footer>
 
+<!-- CONTACT MODAL -->
+<div id="contact-modal" class="modal-overlay">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+
+    <div class="modal-header">
+      <div>
+        <p class="modal-eyebrow">Get in Touch</p>
+        <h2 class="modal-heading" id="modal-heading">Contact</h2>
+      </div>
+      <button class="modal-close" id="modal-close" aria-label="닫기">&#x2715;</button>
+    </div>
+
+    <form id="contact-form" novalidate>
+      <div class="field-row">
+        <div class="field-group">
+          <label class="field-label" for="cf-name">보내는 분 <span class="req">*</span></label>
+          <input id="cf-name" type="text" name="from_name" class="field-input" placeholder="성함" required>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="cf-email">이메일 <span class="req">*</span></label>
+          <input id="cf-email" type="email" name="reply_to" class="field-input" placeholder="회신 이메일" required>
+        </div>
+      </div>
+      <div class="field-group">
+        <label class="field-label" for="cf-subject">제목 <span class="req">*</span></label>
+        <input id="cf-subject" type="text" name="subject" class="field-input" placeholder="제목을 입력해주세요" required>
+      </div>
+      <div class="field-group">
+        <label class="field-label" for="cf-message">내용 <span class="req">*</span></label>
+        <textarea id="cf-message" name="message" class="field-textarea" placeholder="내용을 입력해주세요." rows="5" required></textarea>
+      </div>
+      <div class="field-group">
+        <label class="field-label">첨부파일 <span class="field-hint">PDF · Word · HWP · 이미지 (선택)</span></label>
+        <div class="file-wrap">
+          <input type="file" id="cf-file" name="user_attachments" class="file-hidden"
+                 accept=".pdf,.doc,.docx,.hwp,.xls,.xlsx,.jpg,.jpeg,.png">
+          <label for="cf-file" class="file-btn">파일 선택</label>
+          <span class="file-name" id="cf-file-name">선택된 파일 없음</span>
+          <button type="button" class="file-clear" id="cf-file-clear">&#x2715;</button>
+        </div>
+      </div>
+      <p class="form-error" id="form-error"></p>
+      <button type="submit" class="submit-btn" id="submit-btn">
+        <span id="submit-label">제출하기</span>
+      </button>
+    </form>
+
+    <div class="form-success" id="form-success">
+      <div class="success-icon">&#x2713;</div>
+      <p class="success-msg">메시지가 전송되었습니다.<br>확인 후 빠르게 연락드리겠습니다.</p>
+      <button class="submit-btn" id="success-close">닫기</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
