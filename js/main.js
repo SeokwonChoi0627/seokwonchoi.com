@@ -61,9 +61,9 @@ if (statsBand) counterObserver.observe(statsBand);
 //  4. Account → General → Public Key 복사
 //  5. 아래 세 상수를 교체하면 바로 동작합니다.
 // ────────────────────────────────────────────────────────────────────────
-const EJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-const EJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EJS_PUBLIC_KEY  = 'pGghz9Loz1w-DskFg';
+const EJS_SERVICE_ID  = 'service_0m2mkpd';
+const EJS_TEMPLATE_ID = 'template_h99mwud';
 
 if (typeof emailjs !== 'undefined') {
   emailjs.init({ publicKey: EJS_PUBLIC_KEY });
