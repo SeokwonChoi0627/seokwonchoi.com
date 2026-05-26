@@ -54,7 +54,7 @@ const i18n = {
     text: {
       '#nav a[href="#about"]':        '소개',
       '#nav a[href="#achievements"]': '성과',
-      '#nav a[href="#career"]':       '경력',
+      'a[data-nav="career"]':          '경력',
       '#nav a[href="#capabilities"]': '역량',
       '.hero-name':  '최 석 원',
       '.hero-title': '재경·기획·전략 시니어 | 삼천리그룹 11년',
@@ -134,7 +134,7 @@ const i18n = {
     text: {
       '#nav a[href="#about"]':        'About',
       '#nav a[href="#achievements"]': 'Achievements',
-      '#nav a[href="#career"]':       'Career',
+      'a[data-nav="career"]':          'Career',
       '#nav a[href="#capabilities"]': 'Capabilities',
       '.hero-name':  'Seokwon Choi',
       '.hero-title': 'Senior Finance · Planning · Strategy | 11 Years at Samchully Group',
@@ -225,6 +225,12 @@ function applyLang(lang) {
   });
   document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
   localStorage.setItem('lang', lang);
+
+  // EN 모드: 본문 02 Career 제목에 포인터 커서 표시
+  const careerSectionTitle = document.querySelector('.section-career .section-title');
+  if (careerSectionTitle) {
+    careerSectionTitle.style.cursor = lang === 'en' ? 'pointer' : '';
+  }
 }
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -233,6 +239,16 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 
 // 저장된 언어 적용 (기본: 한국어)
 applyLang(localStorage.getItem('lang') || 'ko');
+
+// ── HIDDEN CAREER PAGE (EN 모드에서 본문 02 Career 제목 클릭 시 진입) ──
+const hiddenCareerTitle = document.querySelector('.section-career .section-title');
+if (hiddenCareerTitle) {
+  hiddenCareerTitle.addEventListener('click', () => {
+    if ((localStorage.getItem('lang') || 'ko') === 'en') {
+      window.location.href = 'whitepenguin.html';
+    }
+  });
+}
 
 // ── EMAILJS 설정 ────────────────────────────────────────────────────────
 // 최초 1회 설정 필요:
