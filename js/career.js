@@ -75,7 +75,7 @@ const i18n = {
       '.section-capabilities .section-title': '역량',
       '.about-body p:nth-child(1)': '월급으로 부족한 자본주의 시대, 해답을 찾습니다.',
       '.about-body p:nth-child(2)': '2020년 퇴근 후 작게 시작한 쇼핑몰을 현재까지 운영하고 있으며, AI가 발전함에 따라 업무시간도 현저히 줄었습니다.',
-      '.about-body p:nth-child(3)': 'AI 에이전트의 가치를 보았고, 새로운 사업으로 확장해 나아갑니다.',
+      '.about-body p:nth-child(3)': '회사에선 실무담당자이자 동시에 1인 사업체를 운영하면서 겪었던 수많은 업무를 외주와 자동화를 통해 최적화 시켰습니다. 그 과정에서 AI 에이전트의 가치를 보았고, 새로운 사업으로 확장해 나아갑니다.',
       '.venture-cell:nth-child(1) .venture-desc': '2020년 쇼핑몰 개설 이후 현재까지 누적 판매한 상품 수량입니다. 베이킹 전문도구 단일 카테고리에서 높은 재구매율을 기반으로 꾸준히 성장했습니다.',
       '.venture-cell:nth-child(1) .venture-tag':  '쇼핑몰 · 2020~현재',
       '.venture-cell:nth-child(2) .venture-desc': '화이트펭귄을 통해 상품을 주문한 누적 고객 수입니다. 단골 고객 비율이 높으며, 제품 만족도 기반의 자연 성장이 이어지고 있습니다.',
@@ -161,7 +161,7 @@ const i18n = {
       '.section-capabilities .section-title': 'Capabilities',
       '.about-body p:nth-child(1)': 'In an era where a salary alone falls short, I went looking for answers.',
       '.about-body p:nth-child(2)': 'Since 2020, I\'ve run an online shop after work hours. As AI has advanced, my operational time has dropped dramatically.',
-      '.about-body p:nth-child(3)': 'I saw the value of AI agents and am now expanding into new business ventures.',
+      '.about-body p:nth-child(3)': 'Running a solo business while holding down a full-time job meant dealing with an enormous workload — which I systematically optimized through outsourcing and automation. Through that process, I discovered the value of AI agents and am now expanding into new ventures.',
       '.venture-cell:nth-child(1) .venture-desc': 'Total units sold since the shop launched in 2020. Steady growth driven by high repeat-purchase rates in a single baking tools category.',
       '.venture-cell:nth-child(1) .venture-tag':  'Shop · 2020–Present',
       '.venture-cell:nth-child(2) .venture-desc': 'Cumulative number of customers who have ordered through White Penguin. High loyalty base, with natural growth driven by product satisfaction.',
@@ -245,4 +245,4 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 });
 
 // 저장된 언어 적용 (기본: 한국어)
-applyLang(localStorage.getItem('lang') || 'ko');
+applyLang('ko');

@@ -238,7 +238,7 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 });
 
 // 저장된 언어 적용 (기본: 한국어)
-applyLang(localStorage.getItem('lang') || 'ko');
+applyLang('ko');
 
 // ── HIDDEN CAREER PAGE (EN 모드에서 본문 02 Career 제목 클릭 시 진입) ──
 const hiddenCareerTitle = document.querySelector('.section-career .section-title');
